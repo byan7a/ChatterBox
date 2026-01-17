@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chatterbox Timeline</title>
+   <link rel="icon" href="Screenshot 2026-01-17 140053.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    /* Global Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #1f1f1f;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 2px solid #333;
+    }
+
+    header h1 {
+      color: #fff;
+      font-size: 2rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      background: #181818;
+      padding: 10px;
+    }
+
+    nav a {
+      color: #bbb;
+      text-decoration: none;
+      margin: 0 15px;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    .timeline {
+      margin: 30px auto;
+      max-width: 800px;
+      background: #1e1e1e;
+      border-radius: 8px;
+      padding: 20px;
+    }
+
+    .timeline h2 {
+      text-align: center;
+      color: #fff;
+      margin-bottom: 20px;
+    }
+
+    .timeline-item {
+      border-bottom: 1px solid #333;
+    }
+
+    .timeline-header {
+      cursor: pointer;
+      padding: 15px;
+      background: #181818;
+      color: #fff;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .timeline-header:hover {
+      background: #222;
+    }
+
+    .timeline-content {
+      display: none;
+      padding: 15px;
+      color: #aaa;
+      background: #1e1e1e;
+    }
+
+    .timeline-content p {
+      margin: 0;
+    }
+
+    footer {
+      background: #1f1f1f;
+      text-align: center;
+      padding: 15px;
+      border-top: 2px solid #333;
+      margin-top: 20px;
+    }
+
+    footer p {
+      color: #777;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Chatter box</h1>
+  </header>
+
+  <nav>
+    <a href="events.html">Home</a>
+    <a href="about.html">About us</a>
+    <a href="timeline.html">timelines</a>
+    <a href="contacts.html">Contact</a>
+  </nav>
+
+  <!-- Timeline Section -->
+  <section class="timeline">
+    <h2>📅 Project Timeline</h2>
+
+    <div class="timeline-item">
+      <div class="timeline-header">the start</div>
+      <div class="timeline-content">
+        <p>an open minded individuals formed a group of a few people and calls it the forsaken council it was made to play nad hangout
+            by atharva kimas and some other members such as azfar and banim the group would go on a month in just those few members.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-header">Popularization</div>
+      <div class="timeline-content">
+        <p>during the middle of the first semester the leader met in an encounter that would change hte group history once and for all 
+            atharve met byan who instantly popularize the group leading to the forsaken council rise in the late september it raised to nine people ad then eleven with the help of byan
+        </p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-header">first peak</div>
+      <div class="timeline-content">
+        <p>the group would go on as it is untill a meeting to play games together was held raising an idea to reform the group 
+            into a community of open minded individuals which eventually led to the creation of chatterbox
+        </p>
+      </div>
+    </div>
+
+    <div class="timeline-item">
+      <div class="timeline-header">chatterbox raise to power</div>
+      <div class="timeline-content">
+        <p>with chatterbox now being the group well known name word spread about it and soon reached 15 members and with the start of semester two it is one of the largest friend group/ community ever 
+            it will be raised more but stay tuned for the future.</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 chattergroup | Follow us on socials</p>
+  </footer>
+
+  <script>
+    // Toggle timeline sections
+    document.querySelectorAll('.timeline-header').forEach(header => {
+      header.addEventListener('click', () => {
+        const content = header.nextElementSibling;
+        content.style.display = content.style.display === 'block' ? 'none' : 'block';
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>secret goon box</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        flex-direction: column; /* stack nav on top, box below */
+        background-color: #121212;
+        font-family: Arial, sans-serif;
+      }
+
+      nav {
+        display: flex;
+        justify-content: center;
+        background: #181818;
+        padding: 10px;
+        position: fixed;   /* keep it at the top */
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;     /* make sure it stays above other content */
+      }
+
+      nav a {
+        color: #bbb;
+        text-decoration: none;
+        margin: 0 15px;
+        transition: color 0.3s;
+      }
+
+      nav a:hover {
+        color: #fff;
+      }
+
+      .box {
+        background-color: #1e1e1e;
+        color: #e0e0e0;
+        padding: 40px;
+        border-radius: 8px;
+        text-align: center;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        margin: auto; /* center the box */
+        margin-top: 80px; /* push down so it doesn’t overlap nav */
+      }
+
+      .box h2 {
+        margin-bottom: 15px;
+        color: #fff;
+      }
+
+      .box p {
+        color: #aaa;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <a href="events.html">Home</a>
+      <a href="about.html">About us</a>
+      <a href="timeline.html">Timelines</a>
+      <a href="contacts.html">Contact</a>
+    </nav>
+
+    <div class="box">
+      <h2>Goon master</h2>
+      <p>banim is a goon master really loves umamusume and cute anime girls.</p>
+    </div>
+  </body>
+</html>

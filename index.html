@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>chatterbox - Login</title>
+   <link rel="icon" href="Screenshot 2026-01-17 140053.png" type="image/x-icon">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .login-box {
+      background: #1e1e1e;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px #000;
+      width: 300px;
+      text-align: center;
+    }
+
+    .login-box h2 {
+      margin-bottom: 20px;
+      color: #fff;
+    }
+
+    .login-box input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+    }
+
+    .login-box button {
+      width: 100%;
+      padding: 10px;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .login-box button:hover {
+      background: #555;
+    }
+
+    .error {
+      color: #ff5555;
+      margin-top: 10px;
+    }
+
+    .redirecting {
+      color: #00ff99;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-box" id="loginBox">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Enter ID">
+    <button onclick="login()">Login</button>
+    <p class="error" id="errorMsg"></p>
+    <p class="redirecting" id="redirectMsg" style="display:none;">Redirecting...</p>
+  </div>
+
+  <script>
+    // Allowed usernames list
+    const allowedUsers = [
+      "byan","emir","atharva","azfar","arkha","arya","arkhan",
+      "abyansyah","abyan","wistara","hanif","aldi","banim",
+      "luthfi","revano"
+    ];
+
+    function login() {
+      const username = document.getElementById("username").value.trim().toLowerCase();
+      const errorMsg = document.getElementById("errorMsg");
+      const redirectMsg = document.getElementById("redirectMsg");
+
+      if (allowedUsers.includes(username)) {
+        errorMsg.textContent = "";
+        redirectMsg.style.display = "block";
+
+        // Wait 2 seconds before redirect
+        setTimeout(() => {
+          window.location.href = "events.html";
+        }, 2000);
+      } else {
+        errorMsg.textContent = "Invalid username. Try again.";
+      }
+    }
+  </script>
+</body>
+</html>
